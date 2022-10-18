@@ -1,0 +1,26 @@
+@use '../../config/config' as *;
+
+.container-options-menu {
+    width: 400px;
+    height: 100vh;
+    background-color: $color-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.container-main-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: .38em;
+    position: absolute;
+    top: calc((76px - 27.38px) / 2);
+    cursor: pointer;
+
+    &__element {
+        width: 33px;
+        height: 5.5px;
+        background-color: $color-white;
+    }
+}

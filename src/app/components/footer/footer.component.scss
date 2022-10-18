@@ -1,0 +1,21 @@
+@use '../../config/config' as *;
+
+.container-footer {
+    background-color: $bg-color-black;
+    color: $color-white;
+    padding: 1.8em;
+    text-align: center;
+    line-height: 1.8em;
+
+    &__paragraph {
+        margin: 0;
+    }
+
+    &__link {
+        color: inherit;
+    }
+
+    &__link:hover {
+        color: $color-red;
+    }
+}

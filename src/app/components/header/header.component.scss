@@ -1,0 +1,24 @@
+@use '../../config/config' as *;
+
+.container-main-menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bg-color-black;
+    color: #ffffff;
+    padding: 1em 1em .5em 1em;
+
+    &__list-images {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-main-menu {
+        padding: 1.2em 1em .6em 1em;
+    
+    }
+}

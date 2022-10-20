@@ -7,7 +7,8 @@
     left: 0;
     background-color: $bg-color-black;
     color: #ffffff;
-    padding: 1em 1em .5em 1em;
+    padding: 1.1em 1em .6em 1em;
+    z-index: 1000;
 
     &__list-images {
         display: flex;

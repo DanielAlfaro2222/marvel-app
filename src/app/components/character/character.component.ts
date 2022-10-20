@@ -16,10 +16,7 @@ export class CharacterComponent {
     url: '',
     series: {},
     stories: {},
-    thumbnail: {
-      extension: '',
-      path: '',
-    },
+    image: '',
     urls: [],
   };
 

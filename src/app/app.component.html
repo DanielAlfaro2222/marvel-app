@@ -2,10 +2,15 @@
   <app-header></app-header>
 
   <main>
-    <app-character
-      *ngFor="let personaje of characters"
-      [info]="personaje"
-    ></app-character>
+    <section>
+      <h2>Personajes</h2>
+
+      <swiper [config]="config">
+        <ng-template *ngFor="let personaje of characters" swiperSlide>
+          <app-character [info]="personaje"></app-character>
+        </ng-template>
+      </swiper>
+    </section>
   </main>
 
   <app-footer class="container-app-component__footer"></app-footer>

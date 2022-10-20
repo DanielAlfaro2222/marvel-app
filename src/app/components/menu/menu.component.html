@@ -1,11 +1,36 @@
 <div>
-  <div class="container-main-menu">
-    <div class="container-main-menu__element"></div>
-    <div class="container-main-menu__element"></div>
-    <div class="container-main-menu__element"></div>
+  <div
+    class="container-main-menu"
+    (click)="showMenu()"
+    [class.container-main-menu--gap]="visibleMenu"
+  >
+    <div
+      class="container-main-menu__element"
+      [ngClass]="{
+        'container-main-menu__element--show': visibleMenu,
+        'container-main-menu__element--first': visibleMenu
+      }"
+    ></div>
+    <div
+      class="container-main-menu__element"
+      [ngClass]="{
+        'container-main-menu__element--show': visibleMenu,
+        'container-main-menu__element--second': visibleMenu
+      }"
+    ></div>
+    <div
+      class="container-main-menu__element"
+      [ngClass]="{
+        'container-main-menu__element--show': visibleMenu,
+        'container-main-menu__element--third': visibleMenu
+      }"
+    ></div>
   </div>
 
-  <div class="container-options-menu">
+  <div
+    class="container-options-menu"
+    [class.container-options-menu--show]="visibleMenu"
+  >
     <nav>
       <ul class="container-options-menu__list">
         <li class="container-options-menu__element">

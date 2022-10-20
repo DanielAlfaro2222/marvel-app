@@ -4,3 +4,12 @@ body {
     font-family: $font;
     padding-top: 5em;
 }
+
+.container-swiper {
+
+    &__wrapper {
+        display: flex;
+        column-gap: 1em;
+        overflow: scroll;
+    }
+}

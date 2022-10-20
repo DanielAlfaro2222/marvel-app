@@ -7,9 +7,6 @@ export interface Character {
   url: string;
   series: {};
   stories: {};
-  thumbnail: {
-    extension: string;
-    path: string;
-  };
+  image: string;
   urls: [];
 }

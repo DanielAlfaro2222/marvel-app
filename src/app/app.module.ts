@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CharacterComponent } from './components/character/character.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
+import { DetailCharacterComponent } from './pages/detail-character/detail-character.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     FooterComponent,
     CharacterComponent,
     LoadingComponent,
+    DetailCharacterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,10 +1,14 @@
-<article>
-  <h2>{{ info.name }}</h2>
-  <img
-    src="{{ info.thumbnail.path }}"
-    alt="{{ info.name }}"
-    loading="lazy"
-    decoding="async"
-    width="200"
-  />
+<article class="container-character">
+  <a href="#" class="container-character__link">
+    <img
+      src="{{ info.image }}"
+      alt="{{ info.name }}"
+      loading="lazy"
+      decoding="async"
+      width="200"
+      height="200"
+      class="container-character__img"
+    />
+    <h2 class="container-character__title">{{ info.name }}</h2>
+  </a>
 </article>

@@ -1,4 +1,4 @@
-export interface Character {
+interface CharacterDto {
   id: number;
   name: string;
   description: string;
@@ -7,6 +7,15 @@ export interface Character {
   url: string;
   series: {};
   stories: {};
-  image: string;
+  thumbnail: {
+    extension: string;
+    path: string;
+  };
   urls: [];
 }
+
+interface Character extends Omit<CharacterDto, 'thumbnail'> {
+  image: string;
+}
+
+export { CharacterDto, Character };

@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './components/loading/loading.component';
 import { DetailCharacterComponent } from './pages/detail-character/detail-character.component';
 import { SwiperModule } from 'swiper/angular';
+import { ComicComponent } from './components/comic/comic.component';
+import { SerieComponent } from './components/serie/serie.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { SwiperModule } from 'swiper/angular';
     CharacterComponent,
     LoadingComponent,
     DetailCharacterComponent,
+    ComicComponent,
+    SerieComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

@@ -8,11 +8,11 @@
     top: 0;
     left: 0;
     transform: translateX(-100%);
-    transition: transform .5s;
+    transition: all .5s;
 
     &--show {
         transform: translateX(0);
-        transition: transform .5s;
+        transition: all .5s;
     }
 }
 
@@ -24,6 +24,8 @@
     top: calc(((42px + 1.7em) - 23.55px) / 2);
     cursor: pointer;
     z-index: 100;
+    transform: rotate(0);
+    transition: all .5s;
 
     &--gap {
         row-gap: 0;
@@ -36,8 +38,8 @@
     }
 
     &__element--show {
-        row-gap: 0;
         background-color: $bg-color-black;
+        transition: all .5s;
     }
 
     &__element--first {

@@ -43,14 +43,18 @@
 
 @media screen and (min-width: 1200px) {
     .container-footer {
-        font-size: 1.14rem;
+        padding: 1.1em;
+        line-height: 0;
+        font-size: 1.05rem;
 
         &__paragraph {
+            display: flex;
+            align-items: center;
             column-gap: .6em;
         }
 
         &__icon {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
         }
     }
 }

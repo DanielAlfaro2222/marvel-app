@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Character } from './models/character.model';
 import { RequestApiService } from './services/request-api.service';
 import { SwiperOptions } from 'swiper';
-import { mappingToCharacter } from './helpers/mappingToCharacter';
+import { mappingToCharacter, mappingToComic, mappingToSerie } from './helpers/mapper';
+import { Comic } from './models/comic.model';
+import { Serie } from './models/serie.model';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,8 @@ import { mappingToCharacter } from './helpers/mappingToCharacter';
 export class AppComponent implements OnInit {
   title: string = 'Marvel App';
   characters: Character[] = [];
+  comics: Comic[] = [];
+  series: Serie[] = [];
   config: SwiperOptions = {
     direction: 'horizontal',
     slidesPerGroup: 3,
@@ -32,7 +36,14 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.requestApiService.getAllCharacters().subscribe((res) => {
       this.characters = mappingToCharacter(res.data.results);
-      console.log(res);
     });
+
+    this.requestApiService.getAllComics().subscribe((res) => {
+      this.comics = mappingToComic(res.data.results);
+    });
+
+    this.requestApiService.getAllSeries().subscribe(res => {
+      this.series = mappingToSerie(res.data.results);
+    })
   }
 }

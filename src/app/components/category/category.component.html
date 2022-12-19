@@ -1,0 +1,23 @@
+<section>
+  <router-outlet></router-outlet>
+
+  <h2>{{ title }}</h2>
+
+  <swiper [config]="config" *ngIf="isEqualToTitle('personajes')">
+    <ng-template *ngFor="let elemento of data" swiperSlide>
+      <app-character [data]="elemento"></app-character>
+    </ng-template>
+  </swiper>
+
+  <swiper [config]="config" *ngIf="isEqualToTitle('series')">
+    <ng-template *ngFor="let elemento of data" swiperSlide>
+      <app-serie [data]="elemento"></app-serie>
+    </ng-template>
+  </swiper>
+
+  <swiper [config]="config" *ngIf="isEqualToTitle('comics')">
+    <ng-template *ngFor="let elemento of data" swiperSlide>
+      <app-comic [data]="elemento"></app-comic>
+    </ng-template>
+  </swiper>
+</section>

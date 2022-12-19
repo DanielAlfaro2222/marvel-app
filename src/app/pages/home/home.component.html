@@ -1,0 +1,15 @@
+<section class="container-app-component">
+  <app-header></app-header>
+
+  <main>
+    <app-category
+      *ngFor="let categoria of categories"
+      [title]="categoria.title"
+      [data]="categoria.data"
+    ></app-category>
+  </main>
+
+  <app-footer class="container-app-component__footer"></app-footer>
+</section>
+
+<router-outlet></router-outlet>

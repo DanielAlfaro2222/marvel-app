@@ -7,7 +7,7 @@ import { Character } from 'src/app/models/character.model';
   styleUrls: ['./character.component.scss'],
 })
 export class CharacterComponent {
-  @Input() info: Character = {
+  @Input() data: Character = {
     id: 0,
     name: '',
     description: '',
